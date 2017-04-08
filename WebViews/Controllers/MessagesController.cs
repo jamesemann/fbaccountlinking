@@ -18,22 +18,59 @@ namespace WebViews
         public async Task<HttpResponseMessage> Post([FromBody] Activity activity)
         {
             var connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-
-            var reply = activity.CreateReply();
-
+            
             if (activity.ChannelData != null)
             {
-                reply.Text = JObject.FromObject(activity.ChannelData).ToString();
+                var jobj = JObject.FromObject(activity.ChannelData);
+                var fbAccountLinking = jobj.SelectToken("$..account_linking");
+
+                if (fbAccountLinking != null && fbAccountLinking.HasValues)
+                {
+                    var linkedUnlinked = fbAccountLinking.Value<string>("status");
+
+                    var reply2 = activity.CreateReply();
+
+                    if (linkedUnlinked == "unlinked")
+                    {
+                        reply2.Text = "user just unlinked!";
+                    }
+                    else
+                    {
+                        reply2.Text = "user just linked!";
+                    }
+
+                    await connector.Conversations.ReplyToActivityAsync(reply2);
+                }
+                else
+                {
+                    var reply = activity.CreateReply();
+                    var attachment = CreateLoginLogoutPayload();
+
+                    reply.ChannelData = JObject.FromObject(new { attachment });
+
+                    await connector.Conversations.ReplyToActivityAsync(reply);
+                }
+
+
                 // when we link or unlink our facebook account,
                 // we get a callback ala https://developers.facebook.com/docs/messenger-platform/webhook-reference/account-linking
                 // here, i am writing it out, but we can make some intelligent decisions based on it.
             }
+
+
+            var response = Request.CreateResponse(HttpStatusCode.OK);
+            return response;
+        }
+
+        private static object CreateLoginLogoutPayload()
+        {
             var attachment = new
             {
                 type = "template",
                 payload = new
                 {
                     template_type = "button",
+                    text = "log in or out",
                     buttons = new[]
                     {
                         new
@@ -49,13 +86,7 @@ namespace WebViews
                     }
                 }
             };
-
-            reply.ChannelData = JObject.FromObject(new {attachment});
-
-            await connector.Conversations.ReplyToActivityAsync(reply);
-
-            var response = Request.CreateResponse(HttpStatusCode.OK);
-            return response;
+            return attachment;
         }
     }
 }

@@ -3,14 +3,18 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    * { font-family: 'segoe ui semilight' }
 
-@ViewBag.fbRedirectUri
+</style>
 
-
-<form action="fakelogin/submit" method="POST" >
-    <input type="text" name="formRedirectUrl" value="@ViewBag.fbRedirectUri"/>
-<br /><br />
-<input type="submit" value="Submit" />
+<form action="fakelogin/submit" method="POST">
+    <input type="hidden" name="formRedirectUrl" value="@ViewBag.fbRedirectUri" />
+    Username<input type="text" value="user"/>
+    <br/>
+    Password<input type="password" value="password"/>
+    <br /><br />
+    <input type="submit" value="Submit" />
 
 </form>
