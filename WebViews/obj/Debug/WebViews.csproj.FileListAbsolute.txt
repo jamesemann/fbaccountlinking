@@ -1,0 +1,56 @@
+C:\fb\login\WebViews\bin\Bot Application1.dll.config
+C:\fb\login\WebViews\bin\Bot Application1.dll
+C:\fb\login\WebViews\bin\Bot Application1.pdb
+C:\fb\login\WebViews\bin\Antlr3.Runtime.dll
+C:\fb\login\WebViews\bin\Autofac.dll
+C:\fb\login\WebViews\bin\Chronic.dll
+C:\fb\login\WebViews\bin\Microsoft.Bot.Builder.dll
+C:\fb\login\WebViews\bin\Microsoft.Bot.Connector.dll
+C:\fb\login\WebViews\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\fb\login\WebViews\bin\Microsoft.Rest.ClientRuntime.dll
+C:\fb\login\WebViews\bin\Microsoft.Web.Infrastructure.dll
+C:\fb\login\WebViews\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\fb\login\WebViews\bin\Newtonsoft.Json.dll
+C:\fb\login\WebViews\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\fb\login\WebViews\bin\System.Net.Http.Formatting.dll
+C:\fb\login\WebViews\bin\System.Web.Helpers.dll
+C:\fb\login\WebViews\bin\System.Web.Http.dll
+C:\fb\login\WebViews\bin\System.Web.Http.WebHost.dll
+C:\fb\login\WebViews\bin\System.Web.Mvc.dll
+C:\fb\login\WebViews\bin\System.Web.Optimization.dll
+C:\fb\login\WebViews\bin\System.Web.Razor.dll
+C:\fb\login\WebViews\bin\System.Web.WebPages.Deployment.dll
+C:\fb\login\WebViews\bin\System.Web.WebPages.dll
+C:\fb\login\WebViews\bin\System.Web.WebPages.Razor.dll
+C:\fb\login\WebViews\bin\WebGrease.dll
+C:\fb\login\WebViews\bin\Antlr3.Runtime.pdb
+C:\fb\login\WebViews\bin\Autofac.xml
+C:\fb\login\WebViews\bin\Microsoft.Bot.Builder.xml
+C:\fb\login\WebViews\bin\Microsoft.Bot.Connector.xml
+C:\fb\login\WebViews\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+C:\fb\login\WebViews\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\fb\login\WebViews\bin\Microsoft.Rest.ClientRuntime.xml
+C:\fb\login\WebViews\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\fb\login\WebViews\bin\Newtonsoft.Json.xml
+C:\fb\login\WebViews\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\fb\login\WebViews\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\fb\login\WebViews\bin\System.Net.Http.Formatting.xml
+C:\fb\login\WebViews\bin\System.Web.Helpers.xml
+C:\fb\login\WebViews\bin\System.Web.Http.xml
+C:\fb\login\WebViews\bin\System.Web.Http.WebHost.xml
+C:\fb\login\WebViews\bin\System.Web.Mvc.xml
+C:\fb\login\WebViews\bin\System.Web.Optimization.xml
+C:\fb\login\WebViews\bin\System.Web.Razor.xml
+C:\fb\login\WebViews\bin\System.Web.WebPages.xml
+C:\fb\login\WebViews\bin\System.Web.WebPages.Deployment.xml
+C:\fb\login\WebViews\bin\System.Web.WebPages.Razor.xml
+C:\fb\login\WebViews\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\fb\login\WebViews\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\fb\login\WebViews\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\fb\login\WebViews\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\fb\login\WebViews\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\fb\login\WebViews\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\fb\login\WebViews\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\fb\login\WebViews\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\fb\login\WebViews\obj\Debug\Bot Application1.dll
+C:\fb\login\WebViews\obj\Debug\Bot Application1.pdb

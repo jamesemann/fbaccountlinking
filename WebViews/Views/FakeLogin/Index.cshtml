@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@ViewBag.fbRedirectUri
+
+
+<form action="fakelogin/submit" method="POST" >
+    <input type="text" name="formRedirectUrl" value="@ViewBag.fbRedirectUri"/>
+<br /><br />
+<input type="submit" value="Submit" />
+
+</form>

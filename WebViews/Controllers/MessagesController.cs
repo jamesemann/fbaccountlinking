@@ -21,22 +21,28 @@ namespace WebViews
 
             var reply = activity.CreateReply();
 
+            reply.Text = JObject.FromObject(activity.ChannelData).ToString();
+            // when we link or unlink our facebook account,
+            // we get a callback ala https://developers.facebook.com/docs/messenger-platform/webhook-reference/account-linking
+            // here, i am writing it out, but we can make some intelligent decisions based on it.
+
             var attachment = new
             {
                 type = "template",
                 payload = new
                 {
                     template_type = "button",
-                    text = "Your 🍕 is on it's way!",
                     buttons = new[]
                     {
                         new
                         {
-                            type = "web_url",
-                            url = "https://webviewtest2103.azurewebsites.net/?q=" + Guid.NewGuid().ToString(),
-                            title = "See on map",
-                            webview_height_ratio = "compact",
-                            messenger_extensions = true
+                            type = "account_link",
+                            url = "https://pizzadeliverybot.azurewebsites.net/fakelogin"
+                        },
+                        new
+                        {
+                            type = "account_unlink",
+                            url = ""
                         }
                     }
                 }
