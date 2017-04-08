@@ -21,11 +21,13 @@ namespace WebViews
 
             var reply = activity.CreateReply();
 
-            reply.Text = JObject.FromObject(activity.ChannelData).ToString();
-            // when we link or unlink our facebook account,
-            // we get a callback ala https://developers.facebook.com/docs/messenger-platform/webhook-reference/account-linking
-            // here, i am writing it out, but we can make some intelligent decisions based on it.
-
+            if (activity.ChannelData != null)
+            {
+                reply.Text = JObject.FromObject(activity.ChannelData).ToString();
+                // when we link or unlink our facebook account,
+                // we get a callback ala https://developers.facebook.com/docs/messenger-platform/webhook-reference/account-linking
+                // here, i am writing it out, but we can make some intelligent decisions based on it.
+            }
             var attachment = new
             {
                 type = "template",
